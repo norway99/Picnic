@@ -237,7 +237,9 @@ public class Picture extends SimplePicture
     }
     System.out.println(count);
   }
-  
+
+    
+    
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
     * current picture
