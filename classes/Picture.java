@@ -346,7 +346,24 @@ public class Picture extends SimplePicture
 	this.mirrorVertical();
 	this.write("collage.jpg");
     }
-  
+
+    /** Method to create collage of several of my pictures */
+    public void myCollage()
+    {
+	Picture flower1 = new Picture("flower1.jpg");
+	Picture flower2 = new Picture("flower2.jpg");
+	Picture flower3 = new Picture("whiteFlower.jpg");
+
+	flower1.keepOnlyBlue();
+	flower2.grayscale();
+	flower3.mirrorHorizontalBotToTop();
+
+	this.copy(flower1, 0, 0, 100, 150);
+	this.copy(flower2, 50, 50, 300, 250);
+	this.copy(flower3, 0, 100, 50, 200);
+	this.mirrorVertical();
+	this.write("myCollage.jpg");
+    }	
   
     /** Method to show large changes in color 
      * @param edgeDist the distance for finding edges
