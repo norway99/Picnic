@@ -52,6 +52,16 @@ public class PictureTester
 	seagull.mirrorGull();
 	seagull.explore();
     }
+
+    /** Method to test the copy method */
+    public static void testCopy()
+    {
+	Picture blank = new Picture("640x480.jpg");
+	Picture koala = new Picture("koala.jpg");
+	blank.explore();
+	blank.copy(koala, 10, 10, 300, 300);
+	blank.explore();
+    }
     
     /** Method to test the collage method */
     public static void testCollage()
@@ -138,10 +148,10 @@ public class PictureTester
 	//testMirrorVertical();
 	//testMirrorTemple();
 	//testMirrorArms();
-	testMirrorGull();
+	//testMirrorGull();
 	//testMirrorDiagonal();
 	//testCollage();
-	//testCopy();
+	testCopy();
 	//testEdgeDetection();
 	//testEdgeDetection2();
 	//testChromakey();
